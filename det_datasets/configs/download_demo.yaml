@@ -1,0 +1,63 @@
+mode: download # DOWNLOAD
+owner: kli # owner
+
+#upload:
+#  data:
+#    image_path: /ssd/kli/data/did/whitebox/whitebox_quentin/val
+#    anno_path: /ssd/kli/data/did/whitebox/whitebox_quentin/annotations/instances_val_head_face.json
+#    type: val  # val
+#    build_single_file: true
+#    tmp_root: ./tmp
+#
+#  train_data_config:
+#    camera: ["did"]
+#    label_type: ["bbox"]
+#
+#  label_config:
+#    name: ["head", "face"]  # in sequence, body 1, head 2, face 3
+#
+#  channel_config:
+#    name: null  # useful only build_single_file, default ch00000,
+#
+#  customer_config:
+#    customer_type: ["all"]  # mall store all
+#    name: ["GENERAL"]  # WANDA ANTA CTF GENERAL
+#
+#  scene_config:
+#    name: ["general-general"]  # bj-tzwd beijing-cytj
+#
+#  val_data_config:
+#    label_type: ["bbox"]
+#    labels: ["head_realface"]
+#    camera: ["did"]
+#    unique_key: ["first test"]
+#
+
+
+# for download
+download:
+  data:
+    group: detection # detection / face
+    dst_root: ./datasets
+    tmp_root: ./tmp
+
+  train_data_config:
+    camera: ["did"]
+    label_type: ["bbox"]
+
+  label_config:
+    name: ["head", "face"]
+
+  customer_config:
+    customer_type: ["mall"]
+    name: ["GENERAL"]
+
+  scene_config:
+    name: ["general-general"]
+
+  channel_config: null
+
+  val_data_config:
+    id: [9]
+    # unique_key: ["shit"]
+
